@@ -8,7 +8,6 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th width="120">#</th>
 					<th>Subject</th>
 					<th>Message</th>
 					<th>For:</th>
@@ -17,8 +16,7 @@
 			<tbody>
 				{{#each dares}}
 				<tr>
-					<td>{{_id}}</td>
-					<td>{{name}}</td>
+					<td><a href="/dare/{{_id}}">{{name}}</a></td>
 					<td>{{message}}</td>
 					<td>{{gender}}</td>
 

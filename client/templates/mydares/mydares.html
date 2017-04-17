@@ -6,6 +6,29 @@
 		</div>
 		<div class="panel-body">
 		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Subject</th>
+					<th>Message</th>
+					<th>For:</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each dares}}
+				<tr>
+					<td><a href="/dare/{{_id}}">{{name}}</a></td>
+					<td>{{message}}</td>
+					<td>{{gender}}</td>
+
+				</tr>
+				{{else}}
+				<tr>
+					<td rowspan="3">There are no dares</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
 		
 	</div>
 	{{else}}
