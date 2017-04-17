@@ -14,6 +14,9 @@
         <ul class="nav navbar-nav">
         <li><a href="{{pathFor 'dares'}}">Shared  Dares</a></li>
           <li><a href="{{pathFor 'mydares'}}">My Dares</a></li>
+          {{#if currentUser}}
+            <li><a href="" data-toggle="modal" data-target="#openDareModal">Make New Dare</a></li>
+            {{/if}}
         </ul>
       </div><!--/.nav-collapse -->
     </div>
