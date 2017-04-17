@@ -10,18 +10,18 @@
 				<tr>
 					<th width="120">#</th>
 					<th>Subject</th>
-					<th>Date Opened</th>
-					<th>Status</th>
+					<th>Message</th>
+					<th>For:</th>
 				</tr>
 			</thead>
 			<tbody>
 				{{#each dares}}
 				<tr>
 					<td>{{_id}}</td>
-					<td><a href="/ticket/{{_id}}">{{subject}}</a></td>
-					<td>{{formatDate createdAt}}</td>
-					<td><a href="#" class="btn btn-danger btn-tiny close-ticket">Close</a>
-					</td>
+					<td>{{name}}</td>
+					<td>{{message}}</td>
+					<td>{{gender}}</td>
+
 				</tr>
 				{{else}}
 				<tr>
@@ -42,29 +42,31 @@
 					<h4 class="modal-title" id="openDareModalLabel">Make New Dare</h4>
 				</div>
 				<div class="modal-body">
-					<form class="open-ticket-form">
+					<form class="open-dare-form">
 						<div class="form-group">
 							<label>Subject</label>
 							<input type="text" class="form-control" id="name" name="name" placeholder="Name">
 						</div>
 
 						<div class="form-group">
-							<label>Whatever</label>
-							<select class="form-control" id="department" name="department">
-			
+							<label>For Gender</label>
+							<select class="form-control" id="gender" name="gender">
+								<option value="forall">Everyone</option>
+								<option value="women">Women</option>
+								<option value="men">Men</option>
 							
 							</select>
 						</div>
 						<div class="form-group">
-							<label>Priority</label>
-							<select class="form-control" id="priority" name="priority">
+							<label>Difficulty</label>
+							<select class="form-control" id="difficulty" name="difficulty">
 								<option value="low">Low</option>
 								<option value="medium">Medium</option>
 								<option value="high">High</option>
 							</select>
 						</div>	
 						<div class="form-group">
-							<label>Message</label>
+							<label>Dare</label>
 							<textarea class="form-control" id="message" name="message"></textarea>
 						</div>
 						<button type="submit" class="btn btn-primary">Submit Dare</button>
