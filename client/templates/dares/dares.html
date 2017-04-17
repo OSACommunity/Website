@@ -1,0 +1,80 @@
+<template name="dares">
+	<div class="panel panel-primary dare-table">
+		<div class="panel-heading">
+			<h3 class="panel-title">Availiable Dares</h3>
+		</div>
+		<div class="panel-body">
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th width="120">#</th>
+					<th>Subject</th>
+					<th>Date Opened</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each dares}}
+				<tr>
+					<td>{{_id}}</td>
+					<td><a href="/ticket/{{_id}}">{{subject}}</a></td>
+					<td>{{formatDate createdAt}}</td>
+					<td><a href="#" class="btn btn-danger btn-tiny close-ticket">Close</a>
+					</td>
+				</tr>
+				{{else}}
+				<tr>
+					<td rowspan="3">There are no dares</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+	
+
+	<!-- Modal -->
+	<div class="modal fade" id="openDareModal" tabindex="-1" role="dialog" aria-labelledby="openDareModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="openDareModalLabel">Open Ticket</h4>
+				</div>
+				<div class="modal-body">
+					<form class="open-ticket-form">
+						<div class="form-group">
+							<label>Subject</label>
+							<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+						</div>
+
+						<div class="form-group">
+							<label>Whatever</label>
+							<select class="form-control" id="department" name="department">
+			
+							
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Priority</label>
+							<select class="form-control" id="priority" name="priority">
+								<option value="low">Low</option>
+								<option value="medium">Medium</option>
+								<option value="high">High</option>
+							</select>
+						</div>	
+						<div class="form-group">
+							<label>Message</label>
+							<textarea class="form-control" id="message" name="message"></textarea>
+						</div>
+						<button type="submit" class="btn btn-primary">Submit Dare</button>
+
+
+					</form>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</template>
