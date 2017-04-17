@@ -1,14 +1,16 @@
 Template.dare.events({
 		'click .claim-dare': function () {
+			var dareId = this._id;
+
 			if(confirm("Are you sure?")){
-				var dareId = Router.current().params.id
+
 
 				   Dares.update({
-                        _id: dareId
+                        _id: this._id
                     }, {
                         $push: {
                             daredTo: {
-                                daredTo: Meteor.userId()
+                                darer: Meteor.userId()
                             }
                         }
                     });
