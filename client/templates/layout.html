@@ -3,17 +3,12 @@
 </body>
 
 <template name="layout">
- {{> navbar}}
- 	<div class="container">
-			
-			<div class="col-md-12">
+ 	{{> navbar}}
+	<div class="row">
+			<div class="column medium-12">
 				{{> flashMessages}}
-
 				{{> yield}}
 			</div>
-
 	</div>
 	{{> footer}}
-
-
 </template>

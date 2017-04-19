@@ -1,0 +1,49 @@
+body {
+
+  color: white;
+  background: #303030;
+
+  h1, h2, h3, h4, h5, h6 {
+
+  }
+
+  a {
+
+  }
+
+  .button {
+
+  }
+
+  table {
+    border-collapse: collapse;
+    background-color: #202020;
+
+
+    tbody {
+      border: none;
+    }
+
+    &, tr, td {
+      background-color: #202020;
+    }
+
+    th {
+      background: #FFF;
+    }
+
+    tr {
+      border-top: 1px solid #393939;
+    }
+
+    background-color: #CCC;
+  }
+
+  label {
+    color: #CCC;
+  }
+
+  form {
+
+  }
+}

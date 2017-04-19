@@ -1,0 +1,27 @@
+$navigationHeight: 60px;
+.navigation {
+  height: $navigationHeight;
+  background: #202020;
+
+  nav ul {
+
+    float: left;
+    list-style: none;
+
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  a {
+
+    line-height: $navigationHeight;
+  }
+  .right {
+    float: right;
+
+
+  }
+}
