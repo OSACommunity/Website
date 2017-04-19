@@ -14,8 +14,21 @@
         <ul class="nav navbar-nav">
         <li><a href="{{pathFor 'dares'}}">Shared  Dares</a></li>
           <li><a href="{{pathFor 'mydares'}}">My Dares</a></li>
-            <li><a href="" data-toggle="modal" data-target="#openDareModal">Make New Dare</a></li>
+          <li><a href="" data-toggle="modal" data-target="#openDareModal">Make New Dare</a></li>
         </ul>
+         <ul class="nav navbar-nav navbar-right">
+          {{#if currentUser}}
+<li><a href="profile">Edit Profile</a></li>
+            <li><a href="sign-out">Sign Out</a></li>
+            
+          {{else}}
+
+            <li><a href="sign-in">Sign In </a></li>
+            <li><a href="sign-up">Sign Up </a></li>
+          {{/if}}
+       
+          
+          </ul>
       </div><!--/.nav-collapse -->
     </div>
   </nav>

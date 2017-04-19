@@ -11,3 +11,8 @@ meteor add meteorhacks:search-source
 meteor add check
 meteor add ejson
 meteor add ajduke:bootstrap-tagsinput
+meteor add ewall:foundation
+meteor add selaias:accounts-entry
+
+
+#https://github.com/selaias/accounts-entry  Accounts entry information
