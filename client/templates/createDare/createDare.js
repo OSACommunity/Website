@@ -1,7 +1,7 @@
 Template.createDare.events({
 	'submit .open-dare-form': function (event) {
 		var name = event.target.name.value;
-		
+
 		var difficulty = event.target.difficulty.value;
 		var gender = event.target.gender.value;
 		var message = event.target.message.value;
@@ -9,7 +9,7 @@ Template.createDare.events({
 
 		Dares.insert({
 			 name: name,
-			 
+
 			 gender: gender,
 			 difficulty: difficulty,
 			 message: message,
@@ -31,4 +31,3 @@ Template.createDare.events({
 
     },
 });
-

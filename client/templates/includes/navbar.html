@@ -1,23 +1,40 @@
 <template name="navbar">
-  <div class="row expanded navigation">
+
+  <div class="row navigation expanded">
+    <div class="column medium-12">
+
+    <div class="row">
     <div class="column medium-12">
       <nav>
+        <a class="logo" href="#">
+          <span class="primary">Share</span>
+          <span>a</span>
+          <span class="secundary">Dare</span>
+        </a>
         <ul>
-          <li><a href="{{pathFor 'dares'}}">Available Dares</a></li>
+          <li class="{{#if isCurrentRoute 'dares'}}active{{/if}}"><a href="{{pathFor 'dares'}}">Available Dares</a></li>
           {{#if currentUser}}
-          <li><a href="{{pathFor 'mydares'}}">My Dares</a></li>
-          <li><a href="{{pathFor 'createDare'}}">Make New Dare</a></li>
+          <li class="{{#if isCurrentRoute 'mydares'}}active{{/if}}"><a href="{{pathFor 'mydares'}}">My Dares</a></li>
+          <li class="{{#if isCurrentRoute 'createDare'}}active{{/if}}" ><a href="{{pathFor 'createDare'}}">Make New Dare</a></li>
           {{/if}}
         </ul>
          <div class="profile right">
           {{#if currentUser}}
-            <a href="profile">Edit Profile</a>
-            <a href="sign-out">Sign Out</a>
+          <ul>
+            <li>Susan <div class="pic"><img src="images/smirk.svg"></div>
+              <ul>
+               <li><a href="profile">Edit Profile</a></li>
+               <li><a href="sign-out">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
           {{else}}
             <a href="sign-in">Login</a> or <a href="sign-up">Register</a>
           {{/if}}
         </div>
       </nav>
+    </div>
+  </div>
     </div>
   </div>
 </template>

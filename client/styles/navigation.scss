@@ -1,27 +1,90 @@
+@import './_settings.scss';
+
 $navigationHeight: 60px;
 .navigation {
   height: $navigationHeight;
   background: #202020;
 
-  nav ul {
+  .logo {
+    float: left;
 
+    span {
+      font-size: 30px;
+      color: gray;
+      line-height: $navigationHeight;
+    }
+    .primary {
+      color: $primaryColor;
+    }
+
+    .secundary {
+      color: $secundaryColor;
+    }
+  }
+
+  nav ul {
     float: left;
     list-style: none;
-
 
     li {
       display: inline-block;
       margin-right: 10px;
+
+      a {
+        line-height: #{ $navigationHeight - 3 };
+        display: block;
+        padding: 0 10px;
+        color: #AAA;
+      }
+
+      &.active a {
+        color: #EEE;
+        background: #252525;
+        border-bottom: 3px solid $primaryColor;
+      }
     }
   }
 
-  a {
-
-    line-height: $navigationHeight;
-  }
-  .right {
+  .right.profile {
     float: right;
+    line-height: 60px;
 
+    .pic {
+      float: right;
+      border-radius: 500px;
+      border: 2px solid white;
+      height: 40px;
+      width: 40px;
+      margin-top: 10px;
+      overflow: hidden;
+      position: relative;
+      margin-left: 5px;
+    }
 
+    img {
+      width: 150%;
+      height: 150%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      line-height: 0px;
+    }
+
+    & > ul {
+      li {
+        line-height: 60px;
+      }
+    }
+
+    ul li:hover ul {
+        display: block;
+    }
+
+    ul li ul {
+      display: none;
+    }
   }
 }
